@@ -1,0 +1,71 @@
+#ISD afv6
+# Simplicity Studio version: 8.6.2.202109061350-1743
+
+# Application configuration
+appId: bootloader
+frameworkRoot: platform\bootloader
+architecture: efr32~family[M]~series[2]~device_configuration[1]~performance[A]~radio[020]~flash[768K]~temp[I]~package[M]~pins[32]~!module+none+gcc
+exactArchitectureToolchain: com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:10.2.1.20201103
+deviceName: bootloader-uart-xmodem_Demo
+sourceSampleAppId: bootloader-uart-xmodem
+generationDirectory: PATH(ISC_RELATIVE):.
+
+# Devices
+
+# Plugin configuration
+appPlugin: bgapi-uart-dfu=false
+appPlugin: core=true
+appPlugin: crc=true
+appPlugin: crypto=true
+appPlugin: debug=false
+appPlugin: delay-driver=true
+appPlugin: emlib=true
+appPlugin: ezsp-gpio-activation=false
+appPlugin: ezsp-spi=false
+appPlugin: gbl-compression-lz4=false
+appPlugin: gbl-compression-lzma=false
+appPlugin: gpio-activation=true
+appPlugin: internal_flash=false
+appPlugin: mbedtls=true
+appPlugin: parser=true
+appPlugin: parser-eblv2=false
+appPlugin: parser-noenc=false
+appPlugin: se-manager=true
+appPlugin: spi-driver=false
+appPlugin: spiflash=false
+appPlugin: spislave-driver=false
+appPlugin: storage-common=false
+appPlugin: storage-common-single=false
+appPlugin: token-management=true
+appPlugin: uart-driver=true
+appPlugin: upgrade-version=false
+appPlugin: xmodem-parser=true
+appPlugin: xmodem-uart=true
+
+# Setup configurations
+{setupId:additionalFiles
+}
+{setupId:bootloaderStorage
+}
+{setupId:callbackConfiguration
+}
+{setupId:hwConfig
+lastArchitectureId=EFR32MG1P232F256GM48+BRD4151A+iar
+featureLevel=1
+active=true
+lastHwConfFileUsed=PATH(STACK_RELATIVE):app/builder/builder_local/bootloader-uart-xmodem_Demo/custom_efr32mg21a020f768im32.hwconf
+}
+{setupId:information
+\{key:description
+
+\}
+}
+{setupId:macros
+}
+{setupId:quizz
+}
+{setupId:template
+--version:2
+}
+
+# Plugin options
